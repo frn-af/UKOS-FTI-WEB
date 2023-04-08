@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Tusker Grotesk';
+    src: local('Tusker Grotesk 5500 Medium'), local('Tusker-Grotesk-5500-Medium'),
+        url('TuskerGrotesk-5500Medium.woff2') format('woff2'),
+        url('TuskerGrotesk-5500Medium.woff') format('woff'),
+        url('TuskerGrotesk-5500Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
