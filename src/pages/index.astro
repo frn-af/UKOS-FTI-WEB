@@ -1,12 +1,30 @@
 ---
+import Cover from "../components/Cover.astro";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <div>
-      1 + 1 = {1 + 1}
+  <main class="max-w-[85%] mx-auto px-[2em] py-[1em] bg-black w-full">
+    <div class="flex gap-[1px] h-[70vh]">
+      <div class="bg-white w-[55%] rounded-[10px]">
+        <Cover />
+      </div>
+      <div class="bg-slate-400 rounded-[10px] w-[45%]">
+        1 + 1 = {1 + 1}
+      </div>
+    </div>
+    <div class="flex mt-[1px] gap-[1px] h-[30vh]">
+      <div class="w-[55%] flex">
+        <div class="bg-slate-300 rounded-[10px] w-1/2">
+          1 + 1 = {1 + 1}
+        </div>
+        <div class="bg-slate-600 rounded-[10px] w-1/2">
+          1 + 1 = {1 + 1}
+        </div>
+      </div>
+      <div class="bg-slate-200 rounded-[10px] w-[45%]">
+        1 + 1 = {1 + 1}
+      </div>
     </div>
   </main>
 </Layout>
