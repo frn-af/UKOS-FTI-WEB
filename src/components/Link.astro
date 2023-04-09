@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+interface props {
+  text: string;
+  url: string;
+  icon: string;
+  style: "bg-primary" | "bg-white";
+}
+
+const { text, url, icon, style } = Astro.props as props;
+---
+
+<a
+  href={url}
+  class:list={style}
+  class="h-1/4 flex capitalize rounded-[15px] px-5 items-center justify-between mt-[1px] hover:rotate-6 hover:scale-110 hover:border-2 hover:border-black transition-transform ease-out duration-300"
+>
+  <Icon name={icon} />
+  {text}</a
+>
+<style>
+  [astro-icon] {
+    width: 20px;
+    height: 20px;
+  }
+</style>

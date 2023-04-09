@@ -1,6 +1,7 @@
 ---
 import Cover from "../components/Cover.astro";
 import Navigation from "../components/Navigation.astro";
+import Quote from "../components/Quote.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -23,7 +24,9 @@ import Layout from "../layouts/Layout.astro";
           1 + 1 = {1 + 1}
         </div>
       </div>
-      <div class="bg-white rounded-[10px] w-[45%]"></div>
+      <div class="bg-white rounded-[10px] w-[45%] p-5">
+        <Quote />
+      </div>
     </div>
   </main>
 </Layout>

@@ -4,6 +4,9 @@ import img1 from "../images/1.jpeg";
 import img2 from "../images/2.jpeg";
 import img3 from "../images/3.jpeg";
 
+import { Icon } from "astro-icon";
+import Link from "./Link.astro";
+
 const navItem = [
   { name: "about", link: "#" },
   { name: "caretaker", link: "#" },
@@ -13,16 +16,26 @@ const navItem = [
 ---
 
 <div class="flex gap-[1px] h-1/2 rounded-[15px]">
-  <div class="w-[200px] bg-slate-300 rounded-[15px]">
+  <div class="w-1/2 bg-slate-300 rounded-[15px]">
     <Image
       src={img2}
       alt="1"
-      width={200}
+      width={250}
       aspectRatio={1 / 1}
       class="rounded-[15px] h-full object-cover"
     />
   </div>
-  <div class="w-1/2 bg-black rounded-[15px] p-5 flex flex-col justify-between">
+  <div
+    class="relative w-2/3 bg-black rounded-[15px] p-5 flex flex-col justify-between"
+  >
+    <div class="absolute left-[90%]">
+      <div class="pulse bg-primary">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <ul class="capitalize text-slate-100 font-medium">
       {
         navItem.map(({ name, link }) => {
@@ -34,24 +47,27 @@ const navItem = [
         })
       }
     </ul>
+
     <h3 class="text-slate-300 capitalize font-semibold text-sm">
-      did you find somethings?
+      explore more
     </h3>
   </div>
 </div>
 <div class="flex mt-[1px] gap-[1px] h-1/2 pb-[1px]">
   <div class="w-2/3 rounded-[15px] flex flex-col justify-between">
     <div class="h-full">
-      <div
-        class="bg-primary rounded-[15px] h-1/4 flex items-center justify-center hover:rotate-6 hover:scale-110 hover:border-2 hover:border-white"
-      >
-        <a href="#" class="font-medium capitalize">recent activities</a>
-      </div>
-      <div
-        class="bg-white rounded-[15px] h-1/4 flex items-center justify-center mt-[1px] hover:rotate-6 hover:scale-110 hover:border-2 hover:border-primary"
-      >
-        <a href="#" class="font-medium capitalize">support us</a>
-      </div>
+      <Link
+        text="recent activities"
+        url="#"
+        icon="cil:bolt-circle"
+        style="bg-primary"
+      />
+      <Link
+        text="support us"
+        url="#"
+        icon="mdi:access-point"
+        style="bg-white"
+      />
     </div>
     <h3 class="text-slate-300 capitalize font-semibold text-sm p-5">
       dive deeper
@@ -59,3 +75,37 @@ const navItem = [
   </div>
   <div class="w-1/2 bg-gray-500 rounded-[15px]">Navigation</div>
 </div>
+
+<style>
+  .pulse {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .pulse span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: inherit;
+    opacity: 0.8;
+    animation: pulse 5s ease-out infinite;
+  }
+  .pulse span:nth-child(2) {
+    animation-delay: -1s;
+  }
+  .pulse span:nth-child(3) {
+    animation-delay: -2s;
+  }
+  .pulse span:nth-child(4) {
+    animation-delay: -3s;
+  }
+  @keyframes pulse {
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+</style>
