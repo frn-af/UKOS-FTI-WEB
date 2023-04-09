@@ -1,14 +1,27 @@
 ---
+import { Image } from "@astrojs/image/components";
+import img1 from "../images/1.jpeg";
+import img2 from "../images/2.jpeg";
+import img3 from "../images/3.jpeg";
+
 const navItem = [
   { name: "about", link: "#" },
   { name: "caretaker", link: "#" },
-  { name: "blog", link: "#" },
   { name: "contact", link: "#" },
+  { name: "blog", link: "#" },
 ];
 ---
 
 <div class="flex gap-[1px] h-1/2 rounded-[15px]">
-  <div class="w-2/3 bg-slate-300 rounded-[15px]">some content</div>
+  <div class="w-[200px] bg-slate-300 rounded-[15px]">
+    <Image
+      src={img2}
+      alt="1"
+      width={200}
+      aspectRatio={1 / 1}
+      class="rounded-[15px] h-full object-cover"
+    />
+  </div>
   <div class="w-1/2 bg-black rounded-[15px] p-5 flex flex-col justify-between">
     <ul class="capitalize text-slate-100 font-medium">
       {
