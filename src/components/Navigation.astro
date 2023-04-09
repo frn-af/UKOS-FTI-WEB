@@ -7,6 +7,7 @@ import img3 from "../images/3.jpeg";
 import { Icon } from "astro-icon";
 import Link from "./Link.astro";
 import qrcode from "../images/frame.png";
+import Card from "./Card.astro";
 
 const navItem = [
   { name: "about", link: "#" },
@@ -17,13 +18,9 @@ const navItem = [
 ---
 
 <div class="flex gap-[2px] h-1/2 rounded-[15px]">
-  <div
-    class="w-1/2 bg-gradient-to-br from-gray-200 to-gray-300 rounded-[15px] hover:scale-110 hover:z-10 hover:border-2 hover:border-main transition-transform ease-out duration-300"
-  >
-  </div>
-  <div
-    class="relative w-2/3 bg-main rounded-[15px] p-5 flex flex-col justify-between hover:scale-110 hover:border-2 hover:border-white transition-transform ease-out duration-300"
-  >
+  <Card classes="w-1/2 bg-gradient-to-br from-gray-200 to-gray-300" bordered />
+
+  <div class="bg-main relative w-2/3 p-5 flex flex-col justify-between">
     <div class="absolute left-[90%]">
       <div class="pulse bg-primary">
         <span></span>
@@ -56,21 +53,23 @@ const navItem = [
         text="recent activities"
         url="#"
         icon="cil:bolt-circle"
-        style="bg-primary"
+        style="bg-primary "
       />
       <Link
         text="support us"
         url="#"
         icon="mdi:access-point"
-        style="bg-white"
+        style="bg-gray-200"
       />
     </div>
     <h3 class="text-slate-300 capitalize font-semibold text-sm p-5">
       dive deeper
     </h3>
   </div>
-  <div
-    class="w-1/2 bg-white rounded-[15px] flex flex-col justify-center items-center hover:scale-110 hover:border-2 hover:border-main transition-transform ease-out duration-300"
+  <Card
+    style="bg-white"
+    classes="w-1/2 flex flex-col justify-center items-center"
+    bordered
   >
     <div class="boerder">
       <a href="www.qr-code-generator.com/" style="cursor:default" rel="nofollow"
@@ -84,7 +83,7 @@ const navItem = [
       />
       <p class="font-semibold text-main capitalize text-center">stay connect</p>
     </div>
-  </div>
+  </Card>
 </div>
 
 <style>
