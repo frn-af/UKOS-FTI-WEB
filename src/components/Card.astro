@@ -1,19 +1,17 @@
 ---
 export interface Props {
-  style?: "bg-primary" | "bg-main" | "bg-accents" | "bg-white";
+  style?: "bg-primary" | "bg-main" | "bg-accents" | "bg-secondary" | "bg-white";
   classes?: string;
-  bordered?: boolean;
 }
 
-const { style, classes, bordered = false } = Astro.props as Props;
+const { style, classes } = Astro.props as Props;
 ---
 
 <div
   class:list={[
     style,
     classes,
-    { "hover:border-main": bordered },
-    "hover:z-10 rounded-[10px] hover:shadow-xl hover:scale-105 hover:border-2 hover:border-white transition-transform ease-out duration-300",
+    "hover:z-10 rounded-[10px] hover:shadow-xl hover:scale-105 hover:border-2 hover:border-main transition-transform ease-out duration-300",
   ]}
 >
   <slot />

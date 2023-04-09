@@ -1,8 +1,5 @@
 ---
 import { Image } from "@astrojs/image/components";
-import img1 from "../images/1.jpeg";
-import img2 from "../images/2.jpeg";
-import img3 from "../images/3.jpeg";
 
 import { Icon } from "astro-icon";
 import Link from "./Link.astro";
@@ -18,9 +15,9 @@ const navItem = [
 ---
 
 <div class="flex gap-[2px] h-1/2 rounded-[15px]">
-  <Card classes="w-1/2 bg-gradient-to-br from-gray-200 to-gray-300" bordered />
+  <Card classes="w-1/2 bg-gradient-to-br from-gray-200 to-gray-300" />
 
-  <div class="bg-main relative w-2/3 p-5 flex flex-col justify-between">
+  <div class="text-main relative w-2/3 p-5 flex flex-col justify-between">
     <div class="absolute left-[90%]">
       <div class="pulse bg-primary">
         <span></span>
@@ -29,7 +26,7 @@ const navItem = [
         <span></span>
       </div>
     </div>
-    <ul class="capitalize text-slate-100 font-medium">
+    <ul class="capitalize font-medium">
       {
         navItem.map(({ name, link }) => {
           return (
@@ -41,9 +38,7 @@ const navItem = [
       }
     </ul>
 
-    <h3 class="text-slate-300 capitalize font-semibold text-sm">
-      explore more
-    </h3>
+    <h3 class="capitalize font-semibold text-sm">explore more</h3>
   </div>
 </div>
 <div class="flex gap-[2px] h-1/2 pb-[2px]">
@@ -53,13 +48,13 @@ const navItem = [
         text="recent activities"
         url="#"
         icon="cil:bolt-circle"
-        style="bg-primary "
+        style="bg-primary"
       />
       <Link
         text="support us"
         url="#"
         icon="mdi:access-point"
-        style="bg-gray-200"
+        style="bg-secondary"
       />
     </div>
     <h3 class="text-slate-300 capitalize font-semibold text-sm p-5">
@@ -67,22 +62,19 @@ const navItem = [
     </h3>
   </div>
   <Card
-    style="bg-white"
+    style="bg-primary"
     classes="w-1/2 flex flex-col justify-center items-center"
-    bordered
   >
-    <div class="boerder">
-      <a href="www.qr-code-generator.com/" style="cursor:default" rel="nofollow"
-      ></a>
-      <Image
-        src={qrcode}
-        alt="QR Code"
-        width={150}
-        aspectRatio={1 / 1}
-        class="rounded-[15px] object-cover"
-      />
-      <p class="font-semibold text-main capitalize text-center">stay connect</p>
-    </div>
+    <a href="www.qr-code-generator.com/" style="cursor:default" rel="nofollow"
+    ></a>
+    <Image
+      src={qrcode}
+      alt="QR Code"
+      width={150}
+      aspectRatio={1 / 1}
+      class="rounded-[15px] object-cover"
+    />
+    <p class="font-semibold text-main capitalize text-center">stay connect</p>
   </Card>
 </div>
 
