@@ -2,18 +2,20 @@
 import { Icon } from "astro-icon";
 ---
 
-<img src="/wink2.svg" alt="wink2" class="absolute right-0 top-0 p-[1em]" />
-<div class="text-accents">
-  <Icon name="bx:bxs-quote-left" />
-</div>
-<p class="text-sm text-main mt-10">
-  "By recognizing the artistic qualities in sports, we not only elevate the
-  athletes who practice them, but we also expand our own appreciation for
-  creativity and expression, and deepen our understanding of what it means to be
-  human."
-</p>
-<div class="absolute right-0 bottom-0 object-cover p-[1em] text-main">
-  <Icon name="lucide:arrow-down-right" />
+<div class="h-full relative">
+  <img src="/wink2.svg" alt="wink2" class="absolute right-0 top-0" />
+  <div class="text-accents">
+    <Icon name="bx:bxs-quote-left" />
+  </div>
+  <p class="text-sm text-main mt-10">
+    "By recognizing the artistic qualities in sports, we not only elevate the
+    athletes who practice them, but we also expand our own appreciation for
+    creativity and expression, and deepen our understanding of what it means to
+    be human."
+  </p>
+  <div class="absolute right-0 bottom-0 object-cover text-main">
+    <Icon name="lucide:arrow-down-right" />
+  </div>
 </div>
 <style>
   [astro-icon] {
