@@ -2,7 +2,6 @@
 import Art from "../components/Art.astro";
 import Card from "../components/Card.astro";
 import Cover from "../components/Cover.astro";
-import Link from "../components/Link.astro";
 import Navigation from "../components/Navigation.astro";
 import Quote from "../components/Quote.astro";
 import Sport from "../components/Sport.astro";
@@ -10,25 +9,48 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="UKOS FTI UNAND">
-  <main class="max-w-[85%] mx-auto px-[2em] py-[1em] w-full">
-    <div class="flex gap-[2px] h-[70vh]">
-      <Card classes="w-[55%] bg-white">
-        <Cover />
+  <div class="flex gap-[2px] h-[70vh]">
+    <Card classes="w-[55%] bg-white">
+      <Cover>
+        <div class="h-3/4 items-center flex justify-center" slot="header">
+          <h1
+            class="font-mono text-main text-8xl flex items-center justify-center"
+          >
+            UK<span class="text-extrabold text-primary">
+              <img src="/logo.svg " alt="Logo" width="90" /></span
+            >S
+          </h1>
+        </div>
+
+        <div slot="description">
+          <p
+            class="relative text-xl font-extrabold text-main capitalize flex whitespace-nowrap"
+          >
+            "Sport is art in motion, and art
+            <img src="/cool.svg" alt="cool" width="30" class="mx-2" />
+            is sport in stillness."
+          </p>
+          <p class="text-xl font-extrabold text-main capitalize flex">
+            what do you
+            <img src="/wink.svg" alt="wink" width="70" class="mx-2" />
+            think about it?!!!
+          </p>
+        </div>
+      </Cover>
+    </Card>
+    <div class="rounded-[10px] w-[45%]">
+      <Navigation />
+    </div>
+  </div>
+  <div class="flex gap-[2px] h-[30vh]">
+    <div class="w-[55%] flex gap-[2px]">
+      <Art />
+      <Sport />
+    </div>
+    <div class="w-[45%]">
+      <Card style="bg-white" classes="h-full p-5">
+        <Quote />
       </Card>
-      <div class="rounded-[10px] w-[45%]">
-        <Navigation />
-      </div>
     </div>
-    <div class="flex gap-[2px] h-[30vh]">
-      <div class="w-[55%] flex gap-[2px]">
-        <Art />
-        <Sport />
-      </div>
-      <div class="w-[45%]">
-        <Card style="bg-white" classes="h-full p-5">
-          <Quote />
-        </Card>
-      </div>
-    </div>
-  </main>
+  </div>
 </Layout>

@@ -1,4 +1,7 @@
 ---
+import Card from "../components/Card.astro";
+import Cover from "../components/Cover.astro";
+import Navigation from "../components/Navigation.astro";
 import "../styles/main.css";
 export interface Props {
   title: string;
@@ -17,6 +20,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-main text-white">
-    <slot />
+    <main class="max-w-[85%] mx-auto px-[2em] py-[1em] w-full">
+      <slot />
+    </main>
   </body>
 </html>

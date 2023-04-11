@@ -1,30 +1,46 @@
 ---
 import Link from "./Link.astro";
+
+const artItem = [
+  {
+    text: "musics",
+    url: "#",
+    height: "h-1/3",
+    icon: "ic:round-library-music",
+    style: "bg-primary",
+  },
+  {
+    text: "traditional dances",
+    url: "#",
+    height: "h-1/3",
+    icon: "mdi:human-female-dance",
+    style: "bg-white",
+  },
+  {
+    text: "fine arts",
+    url: "#",
+    height: "h-1/3",
+    icon: "cil:color-palette",
+    style: "bg-secondary",
+  },
+];
 ---
 
 <div class="rounded-[10px] w-1/2 flex flex-col justify-between">
   <div class="h-full">
-    <Link
-      text="musics"
-      url="#"
-      height="h-1/3"
-      icon="ic:round-library-music"
-      style="bg-primary"
-    />
-    <Link
-      text="traditional dances"
-      url="#"
-      height="h-1/3"
-      icon="mdi:human-female-dance"
-      style="bg-white"
-    />
-    <Link
-      text="fine arts"
-      url="#"
-      height="h-1/3"
-      icon="cil:color-palette"
-      style="bg-secondary"
-    />
+    {
+      artItem.map((item) => {
+        return (
+          <Link
+            text={item.text}
+            url={item.url}
+            height={item.height}
+            icon={item.icon}
+            style={item.style}
+          />
+        );
+      })
+    }
   </div>
   <h3 class="p-[1em] capitalize">Art division</h3>
 </div>

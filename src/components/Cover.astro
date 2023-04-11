@@ -2,10 +2,11 @@
 import { Image } from "@astrojs/image/components";
 import logoUnand from "../images/logo_unand.png";
 import { Icon } from "astro-icon";
-import wink from "../images/wink.svg";
 ---
 
-<div class="z-8 relative p-[1em] h-full flex flex-col text-main">
+<div
+  class="z-8 relative p-[1em] h-full flex flex-col text-main justify-between"
+>
   <div class="text-right text-xs font-bold flex justify-between gap-1">
     <p id="year" class="bg-primary flex items-center p-2 rounded-[10px]"></p>
     <p class="ml-auto">
@@ -13,39 +14,22 @@ import wink from "../images/wink.svg";
     </p>
     <Image src={logoUnand} alt="QR Code" width={30} aspectRatio={1 / 1} />
   </div>
-  <div class="flex justify-center items-center h-2/3 pt-10">
-    <h1 class="font-mono text-main text-8xl flex">
-      UK<span class="text-extrabold text-primary">
-        <img src="/logo.svg " alt="Logo" width="90" /></span
-      >S
-    </h1>
-  </div>
-  <div class="w-full h-[1px] bg-main mx-auto mt-[1em]"></div>
-  <p
-    class="relative text-xl font-extrabold text-main capitalize pt-[1em] flex whitespace-nowrap"
-  >
-    "Sport is art in motion, and art
-    <img src="/cool.svg" alt="cool" width="30" class="mx-2" />
-    is sport in stillness."
-  </p>
-  <p class="text-xl font-extrabold text-main capitalize flex">
-    what do you
-    <img src="/wink.svg" alt="wink" width="70" class="mx-2" />
-    think about it?!!!
-  </p>
+  <slot name="header" />
+  <div class="w-full h-[1px] bg-main mx-auto"></div>
+  <slot name="description" />
 
   <div class="absolute right-0 bottom-0 object-cover p-[1em] text-main">
     <Icon name="lucide:arrow-down-right" />
   </div>
-</div>
 
-<script>
-  const currentYear: number = new Date().getFullYear();
-  document.getElementById("year")!.innerHTML = `/${currentYear}`;
-</script>
-<style>
-  [astro-icon] {
-    width: 2em;
-    height: 2em;
-  }
-</style>
+  <script>
+    const currentYear: number = new Date().getFullYear();
+    document.getElementById("year")!.innerHTML = `/${currentYear}`;
+  </script>
+  <style>
+    [astro-icon] {
+      width: 2em;
+      height: 2em;
+    }
+  </style>
+</div>

@@ -1,37 +1,53 @@
 ---
 import Link from "./Link.astro";
+
+const sportsItem = [
+  {
+    text: "futsal",
+    url: "#",
+    height: "h-1/4",
+    icon: "ic:baseline-sports-soccer",
+    style: "bg-white",
+  },
+  {
+    text: "basketball",
+    url: "#",
+    height: "h-1/4",
+    icon: "iconoir:basketball",
+    style: "bg-secondary",
+  },
+  {
+    text: "batminton",
+    height: "h-1/4",
+    url: "#",
+    icon: "mdi:badminton",
+    style: "bg-primary",
+  },
+  {
+    text: "table tennis",
+    url: "#",
+    height: "h-1/4",
+    icon: "maki:table-tennis",
+    style: "bg-white",
+  },
+];
 ---
 
 <div class="z-9 rounded-[10px] w-1/2 flex flex-col justify-between">
   <div class="h-full">
-    <Link
-      text="futsal"
-      url="#"
-      height="h-1/4"
-      icon="ic:baseline-sports-soccer"
-      style="bg-white"
-    />
-    <Link
-      text="basketball"
-      url="#"
-      height="h-1/4"
-      icon="iconoir:basketball"
-      style="bg-secondary"
-    />
-    <Link
-      text="batminton"
-      height="h-1/4"
-      url="#"
-      icon="mdi:badminton"
-      style="bg-primary"
-    />
-    <Link
-      text="table tennis"
-      url="#"
-      height="h-1/4"
-      icon="maki:table-tennis"
-      style="bg-white"
-    />
+    {
+      sportsItem.map((item) => {
+        return (
+          <Link
+            text={item.text}
+            url={item.url}
+            height={item.height}
+            icon={item.icon}
+            style={item.style}
+          />
+        );
+      })
+    }
   </div>
   <h3 class="p-[1em] capitalize">Sport division</h3>
 </div>
