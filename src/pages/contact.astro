@@ -1,0 +1,123 @@
+---
+import { Icon } from "astro-icon";
+import Card from "../components/Card.astro";
+import Cover from "../components/Cover.astro";
+import Navigation from "../components/Navigation.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact | UKOS FTI UNAND">
+  <div class="flex gap-[2px] h-[70vh]">
+    <Card classes="w-[55%] bg-white">
+      <Cover>
+        <div class="h-3/4 items-center flex justify-center" slot="header">
+          <h1
+            class="font-mono text-main text-8xl flex items-center justify-center"
+          >
+            Contact Us
+          </h1>
+        </div>
+        <div slot="description">
+          <p
+            class="relative text-base font-extrabold text-main capitalize flex"
+          >
+            we would be pleased to hear from you.!!
+          </p>
+        </div>
+      </Cover>
+    </Card>
+    <div class="rounded-[10px] w-[45%]">
+      <Navigation />
+    </div>
+  </div>
+  <div class="flex mt-[2px] gap-[2px] h-[95vh]">
+    <Card style="bg-secondary" classes="w-[55%] h-full p-[1em] text-main">
+      <h3 class="text-xl capitalize font-semibold">get in touch</h3>
+      <div class="w-full h-[1px] bg-main mx-auto"></div>
+      <div class="mt-[1em] flex flex-col justify-center gap-4">
+        <p class="text-lg px-10">
+          "Let us know what's on your mind about UKOS FTI UNAND for a better
+          future."
+        </p>
+        <form class="w-[90%] mx-auto mt-10">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full h-10 bg-secondary text-main placeholder:text-main p-2 border-b-2 border-main focus:outline-none mb-5"
+          />
+          <input
+            type="text"
+            placeholder="Phone Number"
+            class="w-full h-10 bg-secondary text-main placeholder:text-main p-2 border-b-2 border-main focus:outline-none mb-5"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full h-10 bg-secondary text-main placeholder:text-main p-2 border-b-2 border-main focus:outline-none mb-5"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            id="message"
+            cols="30"
+            rows="10"
+            class="w-full h-40 bg-secondary text-main placeholder:text-main p-2 border-b-2 border-main focus:outline-none mb-5"
+          ></textarea>
+        </form>
+        <button
+          class="w-[90%] mx-auto h-10 bg-secondary text-main border-main border-2 font-semibold rounded-[10px] focus:outline-none hover:bg-main hover:text-secondary"
+          >Submit</button
+        >
+      </div>
+    </Card>
+    <div class="w-[45%] h-full flex flex-col gap-[2px]">
+      <Card style="bg-white" classes=" p-5 h-[40%] text-main">
+        <h3 class="text-xl capitalize font-semibold">direct contact</h3>
+        <div class="w-full h-[1px] bg-main mx-auto"></div>
+        <ul class="mt-[1em]">
+          <li class="flex">
+            <Icon name="cil:location-pin" class="w-5" />
+            <span class="ml-5 capitalize">
+              gedung PKMF fakultas teknologi informasi,<br /> universitas andalas,
+              Padang 25163 - Sumatera Barat - Indonesia
+            </span>
+          </li>
+          <li class="flex mt-5">
+            <Icon name="cil:phone" class="w-5" />
+            <span class="ml-5">+************</span>
+          </li>
+          <li class="flex mt-5">
+            <Icon name="cil:envelope-closed" class="w-5" />
+            <span class="ml-5">Hello@ukos.fti.unand.ac.id</span>
+          </li>
+        </ul>
+      </Card>
+      <Card style="bg-primary" classes="p-5  text-main h-3/5 ">
+        <h3 class="text-xl capitalize font-semibold">support us</h3>
+        <div class="w-full h-[1px] bg-main mx-auto"></div>
+        <p class="text-sm mt-[1em]">
+          Support our organization to make a real difference in the world. Your
+          contribution will help us achieve our mission and positively impact
+          the lives of the organisation. Join us in creating a better future
+          today!
+        </p>
+        <div class="flex mt-5">
+          <Icon name="cil:envelope-closed" class="w-5" />
+          <span class="ml-5">SupportUs@ukos.fti.unand.ac.id</span>
+        </div>
+      </Card>
+      <Card style="bg-white" classes="p-5  text-main h-3/5 ">
+        <h3 class="text-xl capitalize font-semibold">lets collab</h3>
+        <div class="w-full h-[1px] bg-main mx-auto"></div>
+        <p class="text-sm mt-[1em]">
+          Together, we are stronger. Join us in collaborative efforts to create
+          positive change and make a meaningful difference in our communities.
+        </p>
+        <div class="flex mt-5">
+          <Icon name="cil:envelope-closed" class="w-5" />
+          <span class="ml-5">Colaboration@ukos.fti.unand.ac.id</span>
+        </div>
+      </Card>
+    </div>
+  </div>
+</Layout>
