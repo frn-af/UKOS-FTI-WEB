@@ -7,35 +7,39 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contact | UKOS FTI UNAND">
-  <div class="flex gap-[2px] h-[70vh]">
-    <Card classes="w-[55%] bg-white">
-      <Cover>
-        <div class="h-3/4 items-center flex justify-center" slot="header">
-          <h1
-            class="font-mono text-main text-8xl flex items-center justify-center"
-          >
-            Contact Us
-          </h1>
-        </div>
-        <div slot="description">
-          <p
-            class="relative text-base font-extrabold text-main capitalize flex"
-          >
-            we would be pleased to hear from you.!!
-          </p>
-        </div>
-      </Cover>
-    </Card>
-    <div class="rounded-[10px] w-[45%]">
+  <div class="md:flex gap-[2px] md:h-[70vh] mx-auto">
+    <div class="rounded-[10px] h-[60vh] md:h-full md:w-[55%]">
+      <Card style="bg-white" classes="h-full relative">
+        <Cover>
+          <div class="h-3/4 items-center flex justify-center" slot="header">
+            <h1
+              class="font-mono text-main text-6xl sm:text-8xl flex items-center justify-center"
+            >
+              contact us
+            </h1>
+          </div>
+
+          <div slot="description">
+            <p
+              class="text-xs sm:text-xl font-extrabold text-main capitalize flex whitespace-nowrap"
+            >
+              we would be pleased to hear from you.!!
+            </p>
+          </div>
+        </Cover>
+      </Card>
+    </div>
+
+    <div class="rounded-[10px] h-[70vh] mt-[2px] md:mt-0 md:w-[45%]">
       <Navigation />
     </div>
   </div>
-  <div class="flex mt-[2px] gap-[2px] h-[95vh]">
-    <Card style="bg-secondary" classes="w-[55%] h-full p-[1em] text-main">
+  <div class="md:flex mt-[2px] gap-[2px] h-full">
+    <Card style="bg-secondary" classes="md:w-[55%] h-full p-[1em] text-main">
       <h3 class="text-xl capitalize font-semibold">get in touch</h3>
       <div class="w-full h-[1px] bg-main mx-auto"></div>
       <div class="mt-[1em] flex flex-col justify-center gap-4">
-        <p class="text-lg px-10">
+        <p class="text-lg text-center md:px-10">
           "Let us know what's on your mind about UKOS FTI UNAND for a better
           future."
         </p>
@@ -70,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
         >
       </div>
     </Card>
-    <div class="w-[45%] h-full flex flex-col gap-[2px]">
+    <div class="md:w-[45%] mt-[2px] md:mt-0 h-full flex flex-col gap-[2px]">
       <Card style="bg-white" classes=" p-5 h-[40%] text-main">
         <h3 class="text-xl capitalize font-semibold">direct contact</h3>
         <div class="w-full h-[1px] bg-main mx-auto"></div>

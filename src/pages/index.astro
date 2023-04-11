@@ -9,45 +9,50 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="UKOS FTI UNAND">
-  <div class="flex gap-[2px] h-[70vh]">
-    <Card classes="w-[55%] bg-white">
-      <Cover>
-        <div class="h-3/4 items-center flex justify-center" slot="header">
-          <h1
-            class="font-mono text-main text-8xl flex items-center justify-center"
-          >
-            UK<span class="text-extrabold text-primary">
-              <img src="/logo.svg " alt="Logo" width="90" /></span
-            >S
-          </h1>
-        </div>
+  <div class="md:flex gap-[2px] md:h-[70vh] mx-auto">
+    <div class="rounded-[10px] h-[60vh] md:h-full md:w-[55%]">
+      <Card style="bg-white" classes="h-full relative">
+        <Cover>
+          <div class="h-3/4 items-center flex justify-center" slot="header">
+            <h1
+              class="font-mono text-main text-8xl sm:text-8xl flex items-center justify-center"
+            >
+              UK<span class="text-extrabold text-primary">
+                <img src="/logo.svg " alt="Logo" class="w-24" /></span
+              >S
+            </h1>
+          </div>
 
-        <div slot="description">
-          <p
-            class="relative text-xl font-extrabold text-main capitalize flex whitespace-nowrap"
-          >
-            "Sport is art in motion, and art
-            <img src="/cool.svg" alt="cool" width="30" class="mx-2" />
-            is sport in stillness."
-          </p>
-          <p class="text-xl font-extrabold text-main capitalize flex">
-            what do you
-            <img src="/wink.svg" alt="wink" width="70" class="mx-2" />
-            think about it?!!!
-          </p>
-        </div>
-      </Cover>
-    </Card>
-    <div class="rounded-[10px] w-[45%]">
+          <div slot="description">
+            <p
+              class="text-xs sm:text-xl font-extrabold text-main capitalize flex whitespace-nowrap"
+            >
+              "Sport is art in motion, and art
+              <img src="/cool.svg" alt="cool" class="sm:w-7 w-6 mx-2" />
+              is sport in stillness."
+            </p>
+            <p
+              class="text-xs sm:text-xl font-extrabold text-main capitalize flex"
+            >
+              what do you
+              <img src="/wink.svg" alt="wink" class="w-10 sm:w-16 mx-2" />
+              think about it?!!!
+            </p>
+          </div>
+        </Cover>
+      </Card>
+    </div>
+
+    <div class="rounded-[10px] h-[70vh] mt-[2px] md:mt-0 md:w-[45%]">
       <Navigation />
     </div>
   </div>
-  <div class="flex gap-[2px] h-[30vh]">
-    <div class="w-[55%] flex gap-[2px]">
+  <div class="md:flex gap-[2px] mt-[2px] h-[30vh]">
+    <div class="md:w-[55%] h-full flex gap-[2px]">
       <Art />
       <Sport />
     </div>
-    <div class="w-[45%]">
+    <div class="md:w-[45%]">
       <Card style="bg-white" classes="h-full p-5">
         <Quote />
       </Card>

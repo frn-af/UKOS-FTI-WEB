@@ -4,10 +4,10 @@ import logoUnand from "../images/logo_unand.png";
 import { Icon } from "astro-icon";
 ---
 
-<div
-  class="z-8 relative p-[1em] h-full flex flex-col text-main justify-between"
->
-  <div class="text-right text-xs font-bold flex justify-between gap-1">
+<div class="relative p-[1em] h-full flex flex-col text-main justify-between">
+  <div
+    class="text-right text-[10px] sm:text-xs font-bold flex justify-between gap-1"
+  >
     <p id="year" class="bg-primary flex items-center p-2 rounded-[10px]"></p>
     <p class="ml-auto">
       Faculty of Information Technology<br /> Andalas university
@@ -19,17 +19,10 @@ import { Icon } from "astro-icon";
   <slot name="description" />
 
   <div class="absolute right-0 bottom-0 object-cover p-[1em] text-main">
-    <Icon name="lucide:arrow-down-right" />
+    <Icon name="lucide:arrow-down-right" class="w-5 sm:w-9" />
   </div>
-
-  <script>
-    const currentYear: number = new Date().getFullYear();
-    document.getElementById("year")!.innerHTML = `/${currentYear}`;
-  </script>
-  <style>
-    [astro-icon] {
-      width: 2em;
-      height: 2em;
-    }
-  </style>
 </div>
+<script>
+  const currentYear: number = new Date().getFullYear();
+  document.getElementById("year")!.innerHTML = `/${currentYear}`;
+</script>

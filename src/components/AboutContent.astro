@@ -2,8 +2,24 @@
 import Card from "./Card.astro";
 ---
 
-<div class="flex mt-[2px] gap-[2px] h-[95vh]">
-  <Card style="bg-secondary" classes="w-[55%] h-full p-[1em] text-main">
+<div class="md:flex mt-[2px] gap-[2px] md:h-[95vh]">
+  <Card style="bg-white" classes=" p-5 h-[40%] md:hidden flex items-center">
+    <img src="/logo.svg" alt="logo" width="100" />
+    <div class="ml-5">
+      <h3 class="text-main text-2xl font-mono uppercase">
+        unit kegiatan olahraga dan seni
+      </h3>
+      <div class="w-full h-[1px] bg-main mx-auto"></div>
+
+      <p class="text-main capitalize text-sm mt-5">
+        fakultas teknologi informasi<br /> universitas andalas
+      </p>
+    </div>
+  </Card>
+  <Card
+    style="bg-secondary"
+    classes="md:w-[55%] mt-[2px] md:mt-0 h-full p-[1em] text-main"
+  >
     <h3 class="text-xl capitalize font-semibold">latar belakang</h3>
     <div class="w-full h-[1px] bg-main mx-auto"></div>
     <div class="mt-[1em] text-sm flex flex-col justify-between gap-4">
@@ -45,8 +61,8 @@ import Card from "./Card.astro";
       </p>
     </div>
   </Card>
-  <div class="w-[45%] h-full flex flex-col gap-[2px]">
-    <Card style="bg-primary" classes=" p-5 h-[40%] flex items-center">
+  <div class="md:w-[45%] mt-[2px] md:mt-0 h-full flex flex-col gap-[2px]">
+    <Card style="bg-white" classes=" p-5 h-[40%] hidden md:flex items-center">
       <img src="/logo.svg" alt="logo" width="200" />
       <div class="ml-5">
         <h3 class="text-main text-2xl font-mono uppercase">
@@ -59,14 +75,14 @@ import Card from "./Card.astro";
         </p>
       </div>
     </Card>
-    <Card style="bg-white" classes="p-5  text-main h-[20%] ">
+    <Card style="bg-primary" classes="p-5  text-main h-[20%] ">
       <h3 class="text-xl capitalize font-semibold">visi</h3>
       <div class="w-full h-[1px] bg-main mx-auto"></div>
       <h3 class="text-lg text-center capitalize mt-[1em]">
         Mewujudkan UKMF yang berkualitas dan kompetitif
       </h3>
     </Card>
-    <Card style="bg-primary" classes="h-[40%] p-5 text-main">
+    <Card style="bg-white" classes="h-[40%] p-5 text-main">
       <h3 class="text-xl capitalize font-semibold">misi</h3>
       <div class="w-full h-[1px] bg-main mx-auto"></div>
       <ul class="list-disc pl-5 text-sm mt-[1em]">
